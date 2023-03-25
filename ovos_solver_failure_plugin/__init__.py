@@ -1,16 +1,14 @@
-import os
 import random
-from datetime import date
+from os.path import dirname
+from os.path import isfile
+
 from neon_solvers import AbstractSolver
-from os import listdir, remove as remove_file
-from os.path import dirname, isfile
-from os.path import join, dirname
-from ovos_utils.log import LOG
 
 
 class FailureSolver(AbstractSolver):
-    def __init__(self):
-        super().__init__(name="FailureBot", priority=999, enable_cache=False, enable_tx=False)
+    def __init__(self, config=None):
+        super().__init__(name="FailureBot", priority=999, config=config,
+                         enable_cache=False, enable_tx=False)
 
     # officially exported Solver methods
     def get_spoken_answer(self, query, context=None):
