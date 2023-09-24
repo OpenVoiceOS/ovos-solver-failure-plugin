@@ -2,19 +2,23 @@ import random
 from os.path import dirname
 from os.path import isfile
 
-from neon_solvers import AbstractSolver
+
+from ovos_plugin_manager.templates.solvers import QuestionSolver
 
 
-class FailureSolver(AbstractSolver):
+class FailureSolver(QuestionSolver):
+    enable_tx = False
+    priority = 9999
+
     def __init__(self, config=None):
-        super().__init__(name="FailureBot", priority=999, config=config,
-                         enable_cache=False, enable_tx=False)
+        config = config or {}
+        super().__init__(config)
 
     # officially exported Solver methods
     def get_spoken_answer(self, query, context=None):
         context = context or {}
         lang = context.get("lang") or "en-us"
-        lines = ["404"]
+        lines = ["404"]  # all langs
         path = f"{dirname(__file__)}/locale/{lang}/no_brain.dialog"
         if isfile(path):
             with open(path) as f:
