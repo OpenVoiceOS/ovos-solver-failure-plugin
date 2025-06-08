@@ -1,8 +1,12 @@
 # Changelog
 
-## [V0.0.0](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/V0.0.0) (2023-03-25)
+## [0.0.2a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.2a1) (2025-06-08)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/2d45a565f98315cfb90745ab90a2437ffc7a127b...V0.0.0)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.1...0.0.2a1)
+
+**Merged pull requests:**
+
+- fix: compatibility with ovos-plugin-manager 1.X.X [\#1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/1) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
