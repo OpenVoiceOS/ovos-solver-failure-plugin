@@ -46,7 +46,7 @@ def get_version():
 
 PLUGIN_ENTRY_POINT = 'ovos-solver-failure-plugin=ovos_solver_failure_plugin:FailureSolver'
 setup(
-    name='ovos-solver-failure-plugin',
+    name='ovos_solver_failure_plugin',
     version=get_version(),
     description='A question solver plugin for ovos/neon/mycroft',
     url='https://github.com/OpenVoiceOS/ovos-solver-failure-plugin',
