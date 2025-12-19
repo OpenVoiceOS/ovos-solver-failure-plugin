@@ -1,16 +1,24 @@
 # Changelog
 
-## [0.0.3a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.3a1) (2025-11-05)
+## [0.0.4a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a2) (2025-12-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/V0.0.2...0.0.3a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a1...0.0.4a2)
 
 **Merged pull requests:**
 
-- Update requirements.txt [\#3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/3) ([JarbasAl](https://github.com/JarbasAl))
+- chore\(deps\): update actions/setup-python action to v6 [\#10](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/10) ([renovate[bot]](https://github.com/apps/renovate))
 
-## [V0.0.2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/V0.0.2) (2025-06-08)
+## [0.0.4a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a1) (2025-12-18)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.2...V0.0.2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/V0.0.3...0.0.4a1)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#5](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/5) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [V0.0.3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/V0.0.3) (2025-11-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.3...V0.0.3)
 
 
 
