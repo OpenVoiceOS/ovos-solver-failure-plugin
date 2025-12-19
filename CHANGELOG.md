@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4a3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a3) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a2...0.0.4a3)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency python to 3.14 [\#6](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/6) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.0.4a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a2) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a1...0.0.4a2)
