@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a2) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a1...0.0.4a2)
+
+**Merged pull requests:**
+
+- chore\(deps\): update actions/setup-python action to v6 [\#10](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/10) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.0.4a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a1) (2025-12-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/V0.0.3...0.0.4a1)
