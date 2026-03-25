@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.4a4](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a4) (2026-03-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a3...0.0.4a4)
+
+**Merged pull requests:**
+
+- fix: rename bare lang code locale directories [\#14](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/14) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- Add French failure solver locale [\#13](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/13) ([goldyfruit](https://github.com/goldyfruit))
+
 ## [0.0.4a3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a3) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a2...0.0.4a3)
