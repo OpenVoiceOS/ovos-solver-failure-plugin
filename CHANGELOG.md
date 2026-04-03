@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.5a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.5a1) (2026-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a4...0.0.5a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#15](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/15) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.4a4](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a4) (2026-03-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a3...0.0.4a4)
