@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.6a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.6a1) (2026-06-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.5a2...0.0.6a1)
+
+**Merged pull requests:**
+
+- fix: require ovos-plugin-manager\>=2.1.0 for opm.\* entry points and cap ovos-\* deps at next major [\#18](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/18) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.5a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.5a2) (2026-06-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.5a1...0.0.5a2)
