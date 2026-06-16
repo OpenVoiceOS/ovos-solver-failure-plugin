@@ -11,7 +11,7 @@ license = {text = "MIT"}
 authors = [{name = "JarbasAi", email = "jarbasai@mailfence.com"}]
 keywords = ["ovos", "plugin", "utterance", "fallback", "query"]
 dependencies = [
-    "ovos-plugin-manager>=0.0.26,<3.0.0",
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
 ]
 
 [project.optional-dependencies]
