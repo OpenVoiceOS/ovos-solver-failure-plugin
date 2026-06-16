@@ -7,7 +7,7 @@ name = "ovos_solver_failure_plugin"
 dynamic = ["version"]
 description = "A question solver plugin for ovos/neon/mycroft"
 readme = "README.md"
-license = {text = "Apache-2.0"}
+license = {text = "MIT"}
 authors = [{name = "JarbasAi", email = "jarbasai@mailfence.com"}]
 keywords = ["ovos", "plugin", "utterance", "fallback", "query"]
 dependencies = [
