@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos_solver_failure_plugin"
+dynamic = ["version"]
+description = "A question solver plugin for ovos/neon/mycroft"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "JarbasAi", email = "jarbasai@mailfence.com"}]
+keywords = ["ovos", "plugin", "utterance", "fallback", "query"]
+dependencies = [
+    "ovos-plugin-manager>=0.0.26,<3.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-solver-failure-plugin"
+
+[project.entry-points."opm.solver.question"]
+"ovos-solver-failure-plugin" = "ovos_solver_failure_plugin:FailureSolver"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_solver_failure_plugin.version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ovos_solver_failure_plugin*"]
+
+[tool.setuptools.package-data]
+ovos_solver_failure_plugin = ["*.json", "locale/**/*"]
