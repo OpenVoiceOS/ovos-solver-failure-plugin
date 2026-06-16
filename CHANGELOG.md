@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.5a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.5a2) (2026-06-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.5a1...0.0.5a2)
+
+**Merged pull requests:**
+
+- chore: add missing shared CI workflows [\#16](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/16) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.5a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.5a1) (2026-04-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a4...0.0.5a1)
