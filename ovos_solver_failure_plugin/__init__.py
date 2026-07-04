@@ -1,32 +1,26 @@
 import random
 from os.path import dirname, isfile
-from typing import Optional
+from typing import Optional, List, Tuple
 
-from ovos_plugin_manager.templates.solvers import QuestionSolver
+from ovos_plugin_manager.templates.agents import RetrievalEngine
 
 
-class FailureSolver(QuestionSolver):
-    enable_tx = False
-    priority = 9999
-
+class DefaultFailureMessage(RetrievalEngine):
     def __init__(self, config=None):
         config = config or {}
         super().__init__(config)
 
-
-    def get_spoken_answer(self, query: str,
-                          lang: Optional[str] = None,
-                          units: Optional[str] = None) -> Optional[str]:
+    def query(self, query: str, lang: Optional[str] = None, k: int = 3) -> List[Tuple[str, float]]:
         """
-        Obtain the spoken answer for a given query.
+        Searches the knowledge base for relevant documents or data.
 
         Args:
-            query (str): The query text.
-            lang (Optional[str]): Optional language code. Defaults to None.
-            units (Optional[str]): Optional units for the query. Defaults to None.
+            query: The search string.
+            lang: BCP-47 language code.
+            k: The maximum number of results to return.
 
         Returns:
-            str: The spoken answer as a text response.
+            List of tuples (content, score) for the top k matches.
         """
         lines = ["404"]  # all langs
         if lang:
@@ -35,10 +29,10 @@ class FailureSolver(QuestionSolver):
                 with open(path) as f:
                     lines = [l for l in f.read().split("\n")
                              if l.strip() and not l.startswith("#")]
-        return random.choice(lines)
+        return [(random.choice(lines), 0.01)]
 
 
 if __name__ == "__main__":
-    bot = FailureSolver()
-    print(bot.spoken_answer("hello!", lang="en-US"))
-    print(bot.spoken_answer("Olá", lang="pt-pt"))
+    bot = DefaultFailureMessage()
+    print(bot.query("hello!", lang="en-US"))
+    print(bot.query("Olá", lang="pt-pt"))
