@@ -1,16 +1,74 @@
 # Changelog
 
-## [0.0.3a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.3a1) (2025-11-05)
+## [0.0.6a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.6a2) (2026-08-01)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/V0.0.2...0.0.3a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.6a1...0.0.6a2)
 
 **Merged pull requests:**
 
-- Update requirements.txt [\#3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/3) ([JarbasAl](https://github.com/JarbasAl))
+- docs: rewrite README in Simplified Technical English [\#21](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/21) ([JarbasAl](https://github.com/JarbasAl))
+- feat: add da-DK and sv-SE translations [\#20](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/20) ([andlo](https://github.com/andlo))
 
-## [V0.0.2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/V0.0.2) (2025-06-08)
+## [0.0.6a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.6a1) (2026-06-16)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.2...V0.0.2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.5a2...0.0.6a1)
+
+**Merged pull requests:**
+
+- fix: require ovos-plugin-manager\>=2.1.0 for opm.\* entry points and cap ovos-\* deps at next major [\#18](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/18) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.0.5a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.5a2) (2026-06-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.5a1...0.0.5a2)
+
+**Merged pull requests:**
+
+- chore: add missing shared CI workflows [\#16](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/16) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.0.5a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.5a1) (2026-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a4...0.0.5a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#15](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/15) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.0.4a4](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a4) (2026-03-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a3...0.0.4a4)
+
+**Merged pull requests:**
+
+- fix: rename bare lang code locale directories [\#14](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/14) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- Add French failure solver locale [\#13](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/13) ([goldyfruit](https://github.com/goldyfruit))
+
+## [0.0.4a3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a3) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a2...0.0.4a3)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency python to 3.14 [\#6](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/6) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [0.0.4a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a2) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.4a1...0.0.4a2)
+
+**Merged pull requests:**
+
+- chore\(deps\): update actions/setup-python action to v6 [\#10](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/10) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [0.0.4a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.4a1) (2025-12-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/V0.0.3...0.0.4a1)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#5](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/5) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [V0.0.3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/V0.0.3) (2025-11-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.3...V0.0.3)
 
 
 
