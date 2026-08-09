@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ovos_solver_failure_plugin"
 dynamic = ["version"]
-description = "A question solver plugin for ovos/neon/mycroft"
+description = "default error message for OpenVoiceOS personas"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [{name = "JarbasAi", email = "jarbasai@mailfence.com"}]
-keywords = ["ovos", "plugin", "utterance", "fallback", "query"]
+keywords = ["OpenVoiceOS", "OVOS", "plugin", "utterance", "fallback", "query"]
 dependencies = [
-    "ovos-plugin-manager>=2.1.0,<3.0.0",
+    "ovos-plugin-manager>=2.3.0a1,<3.0.0",
 ]
 
 [project.optional-dependencies]
@@ -22,8 +22,8 @@ test = [
 [project.urls]
 Homepage = "https://github.com/OpenVoiceOS/ovos-solver-failure-plugin"
 
-[project.entry-points."opm.solver.question"]
-"ovos-solver-failure-plugin" = "ovos_solver_failure_plugin:FailureSolver"
+[project.entry-points."opm.agents.retrieval"]
+"ovos-solver-failure-plugin" = "ovos_solver_failure_plugin:DefaultFailureMessage"
 
 [tool.setuptools.dynamic]
 version = {attr = "ovos_solver_failure_plugin.version.__version__"}
