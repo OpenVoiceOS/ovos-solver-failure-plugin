@@ -12,3 +12,6 @@ jobs:
     secrets: inherit
     with:
       install_extras: "test"
+      # without a test_path the reusable workflow only builds and installs, so
+      # no test in this repository has ever run in CI
+      test_path: "test"
