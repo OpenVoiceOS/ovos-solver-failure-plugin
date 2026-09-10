@@ -1,6 +1,6 @@
-# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/robot.svg' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> FailureSolver
+# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/robot.svg' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> ovos-solver-failure-plugin
 
-FailureSolver is a question solver plugin for OVOS, Neon, and Mycroft assistants. It never answers a query. It always returns a fallback message, so it works as the last solver in a chain when every other solver fails.
+A chat engine plugin for OpenVoiceOS personas that never answers the question. It always returns a canned line, so it works as the last link of a persona chain when every other handler declines. Registered as `ovos-solver-failure-plugin` in the `opm.agents.chat` entry-point group.
 
 ## Install
 
@@ -10,26 +10,29 @@ pip install ovos-solver-failure-plugin
 
 ## Usage
 
-```python
-from ovos_solver_failure_plugin import FailureSolver
+In a persona file, list it last:
 
-d = FailureSolver()
-sentence = d.spoken_answer("hello")
-print(sentence)
+```json
+{"name": "OldSchoolBot", "solvers": ["ovos-solver-rivescript-plugin", "ovos-solver-failure-plugin"]}
+```
+
+Directly:
+
+```python
+from ovos_plugin_manager.templates.agents import AgentMessage, MessageRole
+from ovos_solver_failure_plugin import FailureChatEngine
+
+engine = FailureChatEngine()
+reply = engine.continue_chat([AgentMessage(MessageRole.USER, "hello")], lang="en-US")
+print(reply.content)
 # 404 brain not found
 ```
 
-The plugin ships fallback dialogs for `en-US`, `da-DK`, `fr-FR`, and `sv-SE`. Pass a `lang` code to `spoken_answer` to pick one:
-
-```python
-sentence = d.spoken_answer("hello", lang="fr-FR")
-```
-
-If no dialog exists for the requested language, the plugin returns `404`.
+The plugin ships lines for `en-US`, `da-DK`, `fr-FR`, and `sv-SE` in `locale/<lang>/no_brain.dialog`. The `lang` argument picks the closest shipped language (`en-us` and `en-GB` both resolve to `en-US`). If no shipped language is close enough, the reply is `404`.
 
 ## Related projects
 
-- [OpenVoiceOS/ovos-persona](https://github.com/OpenVoiceOS/ovos-persona): chains question solvers, including this fallback, to answer user queries.
+- [OpenVoiceOS/ovos-persona](https://github.com/OpenVoiceOS/ovos-persona): chains handlers, including this one, to answer user queries.
 - [OpenVoiceOS/ovos-solver-BM25-plugin](https://github.com/OpenVoiceOS/ovos-solver-BM25-plugin): a sibling question solver plugin.
 - [OpenVoiceOS/ovos-ddg-solver-plugin](https://github.com/OpenVoiceOS/ovos-ddg-solver-plugin): a sibling question solver plugin backed by DuckDuckGo.
 
