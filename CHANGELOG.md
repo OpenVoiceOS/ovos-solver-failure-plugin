@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.6a3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.6a3) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.6a2...0.0.6a3)
+
+**Merged pull requests:**
+
+- translate\(kab\): update no\_brain.dialog [\#24](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/24) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.0.6a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.6a2) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.6a1...0.0.6a2)
