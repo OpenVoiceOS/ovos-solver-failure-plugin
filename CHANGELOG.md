@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/1.0.0a1) (2026-09-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.6a3...1.0.0a1)
+
+**Breaking changes:**
+
+- refactor!: failure plugin as a ChatEngine with locale fallback [\#23](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/23) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.0.6a3](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/0.0.6a3) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.6a2...0.0.6a3)
