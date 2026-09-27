@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos_solver_failure_plugin"
+dynamic = ["version"]
+description = "the last link of an OpenVoiceOS persona chain: a localized line saying nothing answered"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "JarbasAi", email = "jarbasai@mailfence.com"}]
+keywords = ["OpenVoiceOS", "OVOS", "plugin", "persona", "fallback"]
+dependencies = [
+    "ovos-plugin-manager>=2.6.1a1,<3.0.0",
+    "ovos-spec-tools>=1.5.0a1,<2.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-solver-failure-plugin"
+
+[project.entry-points."opm.agents.chat"]
+"ovos-solver-failure-plugin" = "ovos_solver_failure_plugin:FailureChatEngine"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_solver_failure_plugin.version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ovos_solver_failure_plugin*"]
+
+[tool.setuptools.package-data]
+ovos_solver_failure_plugin = ["*.json", "locale/**/*"]

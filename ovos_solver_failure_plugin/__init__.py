@@ -1,44 +1,37 @@
 import random
-from os.path import dirname, isfile
-from typing import Optional
+from os.path import dirname, join, isfile
+from typing import List, Optional
 
-from ovos_plugin_manager.templates.solvers import QuestionSolver
-
-
-class FailureSolver(QuestionSolver):
-    enable_tx = False
-    priority = 9999
-
-    def __init__(self, config=None):
-        config = config or {}
-        super().__init__(config)
+from ovos_plugin_manager.templates.agents import AgentMessage, ChatEngine, MessageRole
+from ovos_spec_tools.resources import find_lang_dir
 
 
-    def get_spoken_answer(self, query: str,
-                          lang: Optional[str] = None,
-                          units: Optional[str] = None) -> Optional[str]:
-        """
-        Obtain the spoken answer for a given query.
+class FailureChatEngine(ChatEngine):
+    """The last link of a persona chain: a canned line saying nothing answered.
 
-        Args:
-            query (str): The query text.
-            lang (Optional[str]): Optional language code. Defaults to None.
-            units (Optional[str]): Optional units for the query. Defaults to None.
+    It never fails and never declines, so a persona that ends with it always
+    speaks. The line comes from ``locale/<lang>/no_brain.dialog``, resolved
+    with the OVOS-INTENT-2 language fallback, or ``404`` when no locale fits.
+    """
 
-        Returns:
-            str: The spoken answer as a text response.
-        """
-        lines = ["404"]  # all langs
+    def __init__(self, config: Optional[dict] = None):
+        super().__init__(config or {})
+
+    @staticmethod
+    def _lines(lang: Optional[str]) -> List[str]:
         if lang:
-            path = f"{dirname(__file__)}/locale/{lang.lower()}/no_brain.dialog"
-            if isfile(path):
+            lang_dir = find_lang_dir(join(dirname(__file__), "locale"), lang)
+            path = join(lang_dir, "no_brain.dialog") if lang_dir else ""
+            if path and isfile(path):
                 with open(path) as f:
-                    lines = [l for l in f.read().split("\n")
-                             if l.strip() and not l.startswith("#")]
-        return random.choice(lines)
+                    lines = [l for l in f.read().split("\n") if l.strip() and not l.startswith("#")]
+                if lines:
+                    return lines
+        return ["404"]
 
-
-if __name__ == "__main__":
-    bot = FailureSolver()
-    print(bot.spoken_answer("hello!", lang="en-US"))
-    print(bot.spoken_answer("Olá", lang="pt-pt"))
+    def continue_chat(self, messages: List[AgentMessage],
+                      session_id: str = "default",
+                      lang: Optional[str] = None,
+                      units: Optional[str] = None,
+                      tools: Optional[list] = None) -> AgentMessage:
+        return AgentMessage(role=MessageRole.ASSISTANT, content=random.choice(self._lines(lang)))
