@@ -54,3 +54,32 @@ def test_every_shipped_locale_has_lines():
         assert _lines(d), f"{d}/no_brain.dialog has no usable line"
 
 
+
+
+def test_lines_reads_the_locale_file_itself():
+    """`_lines` is what the reply is drawn from, and no test called it.
+
+    The tests above go through `continue_chat`, which picks one line at
+    random, so they can only assert membership. This calls the method that
+    does the reading, against an independent parse of the same file.
+    """
+    assert FailureChatEngine._lines("en-US") == _lines("en-US")
+
+
+@pytest.mark.parametrize("lang", [None, "xx-XX"])
+def test_lines_falls_back_to_404(lang):
+    """No language, and a language nothing ships, both reach the default."""
+    assert FailureChatEngine._lines(lang) == ["404"]
+
+
+def test_lines_skips_comments_and_blank_lines(tmp_path, monkeypatch):
+    """The comprehension this covers drops `#` lines and whitespace-only
+    ones. No shipped locale file has either, so the case needs a file of its
+    own rather than a locale that happens to be written that way today.
+    """
+    lang_dir = tmp_path / "en-US"
+    lang_dir.mkdir()
+    (lang_dir / "no_brain.dialog").write_text(
+        "# a comment\nfirst line\n\n   \nsecond line\n#another\n")
+    monkeypatch.setattr(pkg, "find_lang_dir", lambda base, lang: str(lang_dir))
+    assert FailureChatEngine._lines("en-US") == ["first line", "second line"]
