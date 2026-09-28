@@ -24,7 +24,8 @@ class FailureChatEngine(ChatEngine):
             path = join(lang_dir, "no_brain.dialog") if lang_dir else ""
             if path and isfile(path):
                 with open(path) as f:
-                    lines = [l for l in f.read().split("\n") if l.strip() and not l.startswith("#")]
+                    lines = [ln for ln in f.read().split("\n")
+                             if ln.strip() and not ln.startswith("#")]
                 if lines:
                     return lines
         return ["404"]
