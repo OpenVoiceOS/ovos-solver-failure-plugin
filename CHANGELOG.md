@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/1.0.1a1) (2026-10-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/1.0.0a1...1.0.1a1)
+
+**Merged pull requests:**
+
+- fix: allow ovos-plugin-manager 3 [\#28](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/28) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.0.0a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/1.0.0a1) (2026-09-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/0.0.6a3...1.0.0a1)
