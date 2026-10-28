@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1a2](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/1.0.1a2) (2026-10-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/1.0.1a1...1.0.1a2)
+
+**Merged pull requests:**
+
+- style: name the comprehension variable ln, not l [\#27](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/pull/27) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.0.1a1](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/tree/1.0.1a1) (2026-10-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-solver-failure-plugin/compare/1.0.0a1...1.0.1a1)
